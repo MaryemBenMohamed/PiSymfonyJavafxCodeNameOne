@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="show" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #242424;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Edit_OrderController">
+   <children>
+      <TextField fx:id="reffe" layoutX="560.0" layoutY="201.0" prefHeight="30.0" prefWidth="330.0" />
+      <TextField fx:id="numero" layoutX="560.0" layoutY="286.0" prefHeight="30.0" prefWidth="330.0" />
+      <TextField fx:id="regio" layoutX="559.0" layoutY="439.0" prefHeight="30.0" prefWidth="330.0" />
+      <Text fx:id="reff" fill="WHITE" layoutX="350.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reference" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Text fx:id="tel" fill="WHITE" layoutX="350.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Text fx:id="pays" fill="WHITE" layoutX="350.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Text fx:id="region" fill="WHITE" layoutX="350.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Region" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <Button fx:id="update" layoutX="619.0" layoutY="652.0" mnemonicParsing="false" onAction="#update_order2" prefHeight="34.0" prefWidth="100.0" style="-fx-background-color: orange;" styleClass="add1-btn" stylesheets="@../style/style.css" text="Edit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Button>
+      <Text layoutX="238.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="124.5367431640625" />
+      <AnchorPane prefHeight="70.0" prefWidth="1366.0" visible="false">
+         <children>
+            <AnchorPane prefHeight="70.0" prefWidth="1359.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox layoutX="200.0" layoutY="-17.0" prefHeight="40.0" prefWidth="1087.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <HBox prefHeight="40.0" prefWidth="1132.0">
+                           <children>
+                              <HBox onMouseClicked="#form" prefHeight="45.0" prefWidth="283.0" styleClass="menuItem" stylesheets="@../style/style.css" />
+                              <HBox prefHeight="45.0" prefWidth="283.0" styleClass="menuItem" stylesheets="@../style/style.css" />
+                              <HBox onMouseClicked="#abon" prefHeight="45.0" prefWidth="283.0" styleClass="menuItem" stylesheets="@../style/style.css" />
+                              <HBox onMouseClicked="#stat" prefHeight="45.0" prefWidth="305.0" styleClass="menuItem" stylesheets="@../style/style.css" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="flesh_id" layoutX="6.0" layoutY="23.0" mnemonicParsing="false" onAction="#fleshbutton" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" textFill="WHITE" />
+                  <ImageView fx:id="flesh2" fitHeight="31.0" fitWidth="41.0" layoutX="31.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/backIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Text fx:id="etat" fill="WHITE" layoutX="350.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <TextField fx:id="codepostal" layoutX="560.0" layoutY="577.0" prefHeight="30.0" prefWidth="330.0" />
+      <Text fx:id="etat1" fill="WHITE" layoutX="350.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PostCod" textAlignment="CENTER">
+         <font>
+            <Font size="17.0" />
+         </font></Text>
+      <AnchorPane fx:id="slider11" layoutX="-1.0" layoutY="744.0" prefHeight="27.0" prefWidth="1234.0" style="-fx-background-color: #242424;" visible="false" />
+      <ComboBox fx:id="comboxL" layoutX="560.0" layoutY="367.0" prefHeight="30.0" prefWidth="330.0" />
+      <ComboBox fx:id="comboxS" layoutX="560.0" layoutY="507.0" prefHeight="30.0" prefWidth="330.0" />
+      <AnchorPane layoutY="20.0" prefHeight="72.0" prefWidth="1762.0" style="-fx-background-color: #242424;" visible="false">
+         <children>
+            <Pane layoutX="-8.0" layoutY="-21.0" prefHeight="31.0" prefWidth="2020.0" style="-fx-background-color: #0A115A;" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="-254.0" AnchorPane.topAnchor="-21.0">
+               <children>
+                  <Label layoutX="1176.0" layoutY="4.0" prefHeight="17.0" prefWidth="56.0" text="Admin :" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="admin" layoutX="1232.0" layoutY="4.0" prefWidth="45.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1295.0" layoutY="4.0" onMouseClicked="#deco" text="Logout" textFill="#e80808">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox layoutX="200.0" layoutY="-17.0" prefHeight="47.0" prefWidth="1556.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="-253.0" AnchorPane.topAnchor="25.0">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="1132.0">
+                     <children>
+                        <HBox onMouseClicked="#form" prefHeight="45.0" prefWidth="283.0" styleClass="menuItem" stylesheets="@../style/style.css">
+                           <children>
+                              <ImageView fx:id="homeMarket" fitHeight="40.0" fitWidth="45.0" onMouseClicked="#homeMarket" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/dash1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="home1" prefHeight="60.0" prefWidth="95.0" text="Home" textFill="#990b0b">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="283.0" styleClass="menuItem" stylesheets="@../style/style.css">
+                           <children>
+                              <ImageView fx:id="cmde31" fitHeight="42.0" fitWidth="45.0" onMouseClicked="#cmde3" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/abo2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="46.0" prefWidth="199.0" text="List of Commands" textFill="#990b0b">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox onMouseClicked="#stat" prefHeight="47.0" prefWidth="426.0" styleClass="menuItem" stylesheets="@../style/style.css">
+                           <children>
+                              <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/stat2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="60.0" prefWidth="276.0" text="Statistics" textFill="#990b0b">
+                                 <font>
+                                    <Font name="Arial Rounded MT Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <ImageView fitHeight="45.0" fitWidth="126.0" layoutX="14.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo%209%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="83.0" layoutY="85.0" prefHeight="10.0" prefWidth="1171.0" style="-fx-background-color: #242424;" visible="false" />
+      <Label layoutX="627.0" layoutY="85.0" text="Edit order" textFill="#dd5e5e">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
